@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" id="text1" value="ABC" data-role="name" />
+
+        <script>
+            let oText1 = document.querySelector('#text1');
+            oText1.removeAttribute('data-role');
+            console.log(oText1.hasAttribute('data-role'));
+        </script>
+    </body>
+</html>
