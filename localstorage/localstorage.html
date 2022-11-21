@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            if (typeof Storage !== 'undefined') {
+                localStorage.setItem('title', 'The Great');
+
+                const users = [
+                    {id: 1, name: 'Hyeok'},
+                    {id: 2, name: 'Seo'},
+                ];
+                localStorage.setItem('users', JSON.stringify(users));
+
+                console.log(localStorage.getItem('title'));
+                console.log(JSON.parse(localStorage.getItem('users')));
+
+                localStorage.removeItem('title');
+                localStorage.removeItem('users');
+            }
+        </script>
+    </body>
+</html>
